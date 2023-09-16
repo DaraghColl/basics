@@ -1,4 +1,4 @@
-import { TopicData } from '../topics';
+import { TopicData } from '../../types/types';
 
 const alphabetData: TopicData[] = [
   {
