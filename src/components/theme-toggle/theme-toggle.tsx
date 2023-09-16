@@ -7,8 +7,8 @@ const ThemeToggle: FC = () => {
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     theme === 'dark'
-      ? document.documentElement.setAttribute('data-theme', 'dark')
-      : document.documentElement.removeAttribute('data-theme');
+      ? document.documentElement.setAttribute('data-theme', 'light')
+      : document.documentElement.setAttribute('data-theme', 'dark');
   };
 
   return (
@@ -18,8 +18,8 @@ const ThemeToggle: FC = () => {
       aria-label="theme toggle button"
       onClick={() => handleThemeSwitch()}
     >
-      {theme === 'light' && <ThemeLightIcon />}
-      {theme === 'dark' && <ThemeDarkIcon />}
+      {theme === 'light' && <ThemeDarkIcon />}
+      {theme === 'dark' && <ThemeLightIcon />}
     </button>
   );
 };
