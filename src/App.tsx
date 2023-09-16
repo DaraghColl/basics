@@ -1,10 +1,16 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { TopicsList } from './pages/topics-list/topics-list';
+import { TopicLearn } from './pages/topic-learn/topic-learn';
 
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>s
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TopicsList />} />
+        <Route path="/topic-learn" element={<TopicLearn />} />
+      </Routes>
+    </Router>
   );
 }
 
