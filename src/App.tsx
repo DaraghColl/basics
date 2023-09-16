@@ -1,7 +1,6 @@
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { TopicsList } from './pages/topics-list/topics-list';
 import { TopicLearn } from './pages/topic-learn/topic-learn';
+import { TopicList } from './pages/topic-list/topic-list';
 import { Header } from './components/header/header';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<TopicsList />} />
+          <Route path="/" element={<TopicList />} />
           <Route path="/topic-learn" element={<TopicLearn />} />
         </Routes>
       </Router>
