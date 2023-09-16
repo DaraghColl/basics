@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<TopicList />} />
-          <Route path="/topic-learn" element={<TopicLearn />} />
+          <Route path="/topic-learn/:id" element={<TopicLearn />} />
         </Routes>
       </Router>
     </div>
