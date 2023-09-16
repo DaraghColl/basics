@@ -1,0 +1,13 @@
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-toggle:active {
+  scale: 0.95;
+}
+
+.theme-toggle svg {
+  transition: 0.3s ease-in-out;
+}
