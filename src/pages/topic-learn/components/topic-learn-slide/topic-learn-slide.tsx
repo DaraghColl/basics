@@ -8,13 +8,14 @@ interface TopicLearnSlideProps {
   answer?: string;
   frontCardLarge?: boolean;
   backCardLarge?: boolean;
+  setInputValue: (value: string) => void;
 }
 const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
-  const { topicData, answer, frontCardLarge, backCardLarge } = props;
+  const { topicData, answer, frontCardLarge, backCardLarge, setInputValue } = props;
   const [isFlipped, setIsFlipped] = useState(false);
   const flipCard = () => {
-    if (!isFlipped) {
-      if (answer === topicData.back) {
+    if (!isFlipped && answer) {
+      if (answer.toLowerCase() === topicData.back.toLowerCase()) {
         toast.success('correct answer');
       } else {
         toast.error('incorrect answer');
@@ -22,6 +23,7 @@ const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
     }
 
     setIsFlipped(!isFlipped);
+    setInputValue('');
   };
 
   return (

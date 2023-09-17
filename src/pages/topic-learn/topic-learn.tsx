@@ -1,5 +1,6 @@
 import './topic-learn.css';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { topicList } from '../../content/topics';
 import { TopicLearnSlide } from './components/topic-learn-slide/topic-learn-slide';
 import { ChangeEvent, useState } from 'react';
@@ -21,11 +22,14 @@ const TopicLearn = () => {
       if (!shuffleOn) {
         setTopic(shuffledData);
         setShuffleOn(!shuffleOn);
+        toast.info('shuffle slides on');
         return;
       }
 
       setTopic(data);
       setShuffleOn(!shuffleOn);
+      toast.info('shuffle slides off');
+
       return;
     };
 
@@ -46,6 +50,7 @@ const TopicLearn = () => {
                 backCardLarge={backCardLarge}
                 answer={inputValue}
                 key={topicData.front}
+                setInputValue={setInputValue}
               />
             );
           })}
