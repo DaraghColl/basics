@@ -9,7 +9,7 @@ const irishData: TopicData[] = [
   {
     front: 'My name is {your name}?',
     back: '{your name} is anim dóm}?',
-    pronuciation: 'Cad is anem ditch',
+    pronuciation: '{your name} is anem dum',
   },
   {
     front: 'How are you?',
