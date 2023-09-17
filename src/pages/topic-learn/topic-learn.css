@@ -101,6 +101,14 @@
   color: var(--text-color-common);
 }
 
+.slide-card-front-large {
+  font-size: 4rem;
+}
+
+.slide-card-front-large {
+  font-size: 4rem;
+}
+
 .slider-controls {
   display: flex;
   justify-content: center;

@@ -4,6 +4,8 @@ interface Topic {
   description: string;
   icon?: string;
   data: TopicData[];
+  frontCardLarge?: boolean;
+  backCardLarge?: boolean;
 }
 
 interface TopicData {

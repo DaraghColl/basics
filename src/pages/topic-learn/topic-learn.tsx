@@ -8,11 +8,10 @@ import { TopicData } from '../../types/types';
 const TopicLearn = () => {
   const { id } = useParams();
   const selectedTopic = topicList.find((topic) => topic.id === Number(id));
-
   const [shuffleOn, setShuffleOn] = useState(false);
 
   if (selectedTopic) {
-    const { data } = selectedTopic;
+    const { data, backCardLarge, frontCardLarge } = selectedTopic;
     const [topic, setTopic] = useState<TopicData[]>(data);
 
     const shuffleSlides = () => {
@@ -33,7 +32,14 @@ const TopicLearn = () => {
       <div className="topic-learn">
         <div className="slider" key={`slides_shuffle_${shuffleOn}`}>
           {topic.map((topicData) => {
-            return <TopicLearnSlide topicData={topicData} key={topicData.front} />;
+            return (
+              <TopicLearnSlide
+                topicData={topicData}
+                frontCardLarge={frontCardLarge}
+                backCardLarge={backCardLarge}
+                key={topicData.front}
+              />
+            );
           })}
         </div>
         <div className="slider-controls">
