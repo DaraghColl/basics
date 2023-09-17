@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import './topic-learn-slide.css';
 import { TopicData } from '../../../../types/types';
+import { toast } from 'react-toastify';
 
 interface TopicLearnSlideProps {
   topicData: TopicData;
@@ -15,7 +16,9 @@ const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
     if (!isFlipped) {
       if (answer === topicData.back) {
         console.log('correct answer');
+        toast.success('correct answer');
       } else {
+        toast.error('incorrect answer');
         console.log('incorrect answer');
       }
     }

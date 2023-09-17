@@ -46,3 +46,12 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+.custom-toast {
+  background-color: var(--primary-color) !important;
+  color: var(--text-color) !important;
+}
+
+.Toastify__close-button {
+  color: var(--text-color) !important;
+}
