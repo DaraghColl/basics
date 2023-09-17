@@ -55,3 +55,10 @@ body {
 .Toastify__close-button {
   color: var(--text-color) !important;
 }
+
+@media (max-width: 768px) {
+  .Toastify__toast-container {
+    margin-top: 2rem !important;
+    padding: 2rem !important;
+  }
+}
