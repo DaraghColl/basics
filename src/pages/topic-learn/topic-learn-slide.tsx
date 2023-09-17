@@ -4,15 +4,27 @@ import { TopicData } from '../../types/types';
 
 interface TopicLearnSlideProps {
   topicData: TopicData;
+  answer?: string;
   frontCardLarge?: boolean;
   backCardLarge?: boolean;
 }
 const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
-  const { topicData, frontCardLarge, backCardLarge } = props;
+  const { topicData, answer, frontCardLarge, backCardLarge } = props;
   const [isFlipped, setIsFlipped] = useState(false);
+  const flipCard = () => {
+    if (!isFlipped) {
+      if (answer === topicData.back) {
+        console.log('correct answer');
+      } else {
+        console.log('incorrect answer');
+      }
+    }
+
+    setIsFlipped(!isFlipped);
+  };
 
   return (
-    <div className="slide" key={topicData.front} onClick={() => setIsFlipped(!isFlipped)}>
+    <div className="slide" key={topicData.front} onClick={flipCard}>
       <div className={`slide-card ${isFlipped ? 'slide-card-clicked' : ''}`}>
         <div className="slide-card-body">
           <div className="slide-card-front">

@@ -18,6 +18,7 @@ const topicList: Topic[] = [
     description: 'Learn and test yourself with times tables up to 10',
     icon: 'math',
     data: timesTablesToTenMathData,
+    canAnswer: true,
   },
 
   {

@@ -4,6 +4,7 @@ interface Topic {
   description: string;
   icon?: string;
   data: TopicData[];
+  canAnswer?: boolean;
   frontCardLarge?: boolean;
   backCardLarge?: boolean;
 }

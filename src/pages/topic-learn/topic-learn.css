@@ -138,3 +138,20 @@
 .slider-controls-button svg {
   width: 2rem;
 }
+
+.slide-answer {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+}
+
+.slide-answer input {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--rounded);
+  padding: 0.75rem;
+  outline: none;
+  color: var(--text-color);
+}
