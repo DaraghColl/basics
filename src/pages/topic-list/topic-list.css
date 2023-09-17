@@ -48,6 +48,10 @@
   text-align: center;
 }
 
+.topic-title {
+  max-width: 80%;
+}
+
 .topic-description {
   color: var(--text-color-common);
   font-size: 0.9rem;
