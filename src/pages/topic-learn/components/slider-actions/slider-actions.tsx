@@ -1,3 +1,4 @@
+import './slider-actions.css';
 import { ChangeEvent, FC } from 'react';
 
 interface SliderActionsInterface {

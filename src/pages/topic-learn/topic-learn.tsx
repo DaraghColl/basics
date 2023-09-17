@@ -1,10 +1,10 @@
 import './topic-learn.css';
 import { useParams } from 'react-router-dom';
 import { topicList } from '../../content/topics';
-import { TopicLearnSlide } from './topic-learn-slide';
+import { TopicLearnSlide } from './components/topic-learn-slide/topic-learn-slide';
 import { ChangeEvent, useState } from 'react';
 import { TopicData } from '../../types/types';
-import { SliderActions } from './components/slider-actions';
+import { SliderActions } from './components/slider-actions/slider-actions';
 
 const TopicLearn = () => {
   const { id } = useParams();

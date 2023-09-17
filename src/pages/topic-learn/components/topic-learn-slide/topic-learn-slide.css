@@ -1,0 +1,86 @@
+.slide {
+  width: 100%;
+  min-width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.scroll-snap-default {
+  scroll-snap-stop: normal;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.slider-controls-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--rounded);
+  cursor: pointer;
+}
+
+.slider-controls-button:active {
+  scale: 0.95;
+}
+
+.slider-controls-button svg {
+  width: 2rem;
+}
+
+.slide-card {
+  height: 100%;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: var(--rounded);
+  padding: 2rem;
+  perspective: 40rem;
+  cursor: pointer;
+}
+
+.slide-card-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.slide-card-clicked .slide-card-body {
+  transform: rotateY(180deg);
+}
+
+.slide-card-front,
+.slide-card-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.slide-card-back {
+  transform: rotateY(180deg);
+}
+
+.slide-card h2 {
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.slide-card h3 {
+  color: var(--text-color-common);
+}
+
+.slide-card-front-large {
+  font-size: 4rem;
+}
+
+.slide-card-front-large {
+  font-size: 4rem;
+}

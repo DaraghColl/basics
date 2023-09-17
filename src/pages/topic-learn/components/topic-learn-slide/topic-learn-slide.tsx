@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import './topic-learn.css';
-import { TopicData } from '../../types/types';
+import './topic-learn-slide.css';
+import { TopicData } from '../../../../types/types';
 
 interface TopicLearnSlideProps {
   topicData: TopicData;
