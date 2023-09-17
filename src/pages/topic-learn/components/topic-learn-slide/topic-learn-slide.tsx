@@ -15,11 +15,9 @@ const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
   const flipCard = () => {
     if (!isFlipped) {
       if (answer === topicData.back) {
-        console.log('correct answer');
         toast.success('correct answer');
       } else {
         toast.error('incorrect answer');
-        console.log('incorrect answer');
       }
     }
 
