@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="container">
+    <div className="mx-auto h-screen max-w-4xl px-8">
       <ToastContainer toastClassName="custom-toast" newestOnTop={true} autoClose={1000} hideProgressBar={true} />
       <Router>
         <Header />
