@@ -1,5 +1,4 @@
 import { FC, useState } from 'react';
-import './topic-learn-slide.css';
 import { TopicData } from '../../../../types/types';
 import { toast } from 'react-toastify';
 
@@ -27,15 +26,23 @@ const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
   };
 
   return (
-    <div className="slide" key={topicData.front} onClick={flipCard}>
-      <div className={`slide-card ${isFlipped ? 'slide-card-clicked' : ''}`}>
-        <div className="slide-card-body">
-          <div className="slide-card-front">
-            <h2 className={frontCardLarge ? 'slide-card-front-large' : ''}>{topicData.front}</h2>
+    <div className="w-full min-w-full snap-center snap-always" key={topicData.front} onClick={flipCard}>
+      <div className="h-full cursor-pointer rounded-md bg-secondary p-8 dark:bg-secondary-dark">
+        <div
+          className={`preserve-3d relative flex h-full items-center justify-center transition-transform duration-[0.8s] ${
+            isFlipped ? 'rotate-y-180' : ''
+          }`}
+        >
+          <div className="backface-visibility absolute">
+            <h2 className={`mb-4 text-2xl ${frontCardLarge ? 'text-7xl' : ''}`}>{topicData.front}</h2>
           </div>
-          <div className="slide-card-back">
-            <h2 className={backCardLarge ? 'slide-card-front-large' : ''}>{topicData.back}</h2>
-            {topicData.pronuciation ? <h3>Pronuciation: {topicData.pronuciation}</h3> : ''}
+          <div className="backface-visibility rotate-y-180 absolute">
+            <h2 className={`mb-4  text-2xl ${backCardLarge ? 'text-7xl' : ''}`}>{topicData.back}</h2>
+            {topicData.pronuciation ? (
+              <h3 className="text-slate-500 dark:text-slate-400">Pronuciation: {topicData.pronuciation}</h3>
+            ) : (
+              ''
+            )}
           </div>
         </div>
       </div>
