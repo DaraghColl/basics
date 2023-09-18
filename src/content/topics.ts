@@ -34,7 +34,7 @@ const topicList: Topic[] = [
     id: 3,
     title: 'Animals',
     description: 'Learn all the animals names with pictures 🙂',
-    icon: 'learning',
+    icon: 'math',
     data: animalData,
     frontCardLarge: true,
   },
