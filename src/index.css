@@ -39,8 +39,6 @@ html[data-theme='light'] {
 }
 
 body {
-  background-color: var(--primary-color);
-  color: var(--text-color);
   min-height: 100dvh;
 }
 
