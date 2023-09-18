@@ -13,7 +13,7 @@ const TopicLearn = () => {
   const [shuffleOn, setShuffleOn] = useState(false);
 
   if (selectedTopic) {
-    const { data, canAnswer, backCardLarge, frontCardLarge } = selectedTopic;
+    const { data, title, canAnswer, backCardLarge, frontCardLarge } = selectedTopic;
     const [topic, setTopic] = useState<TopicData[]>(data);
 
     const shuffleSlides = () => {
@@ -41,6 +41,7 @@ const TopicLearn = () => {
 
     return (
       <div className="topic-learn">
+        <h2 className="topic-learn-title">{title}</h2>
         <div className="slider" key={`slides_shuffle_${shuffleOn}`}>
           {topic.map((topicData) => {
             return (
