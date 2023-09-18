@@ -1,4 +1,3 @@
-import './topic-learn.css';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { topicList } from '../../content/topics';
@@ -40,9 +39,12 @@ const TopicLearn = () => {
     };
 
     return (
-      <div className="topic-learn">
-        <h2 className="topic-learn-title">{title}</h2>
-        <div className="slider" key={`slides_shuffle_${shuffleOn}`}>
+      <div className="flex h-[calc(100%_-_10rem)] w-full flex-col gap-4">
+        <h2 className="text-center text-2xl font-bold tracking-wide">{title}</h2>
+        <div
+          className="scrollbar no-scrollbar flex h-full w-full snap-x snap-mandatory gap-8 overflow-scroll scroll-smooth"
+          key={`slides_shuffle_${shuffleOn}`}
+        >
           {topic.map((topicData) => {
             return (
               <TopicLearnSlide
