@@ -25,7 +25,14 @@ const SliderActions: FC<SliderActionsInterface> = (props) => {
       </button>
       {canAnswer && (
         <div className="slide-answer">
-          <input type="text" name="" id="" value={inputValue} onChange={handleInputChange} />
+          <input
+            type="text"
+            placeholder="your answer"
+            name="slide-answer"
+            id="slide_answer"
+            value={inputValue}
+            onChange={handleInputChange}
+          />
         </div>
       )}
     </div>
