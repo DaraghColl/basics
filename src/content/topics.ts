@@ -10,7 +10,7 @@ const topicList: Topic[] = [
     id: 0,
     title: 'Alphabet',
     description: 'Learn the aplhabet with word association and images 🍎',
-    icon: 'learning',
+    icon: 'language',
     data: alphabetData,
   },
   {
@@ -34,7 +34,7 @@ const topicList: Topic[] = [
     id: 3,
     title: 'Animals',
     description: 'Learn all the animals names with pictures 🙂',
-    icon: 'country',
+    icon: 'learning',
     data: animalData,
     frontCardLarge: true,
   },
