@@ -29,11 +29,6 @@ html[data-theme='light'] {
   --text-color: var(--text-color-light);
 }
 
-.custom-toast {
-  background-color: var(--primary-color) !important;
-  color: var(--text-color) !important;
-}
-
 .Toastify__close-button {
   color: var(--text-color) !important;
 }
