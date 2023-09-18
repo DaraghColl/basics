@@ -17,11 +17,20 @@ const TopicItem: FC<TopicProps> = (props) => {
   };
 
   return (
-    <div className="topic-item" id="topic_${topic.id}" data-topic-id="${topic.id}" onClick={() => navigateToTopic()}>
-      {topic.icon && <div className="topic-icon">{iconsMap[topic.icon]}</div>}
-      <div className="topic-info">
-        <h2 className="topic-title">{topic.title}</h2>
-        <h3 className="topic-description">{topic.description}</h3>
+    <div
+      className="relative flex min-h-[10rem] cursor-pointer flex-col justify-center rounded-md bg-secondary p-8 transition duration-300 ease-in-out hover:scale-105 dark:bg-secondary-dark"
+      id="topic_${topic.id}"
+      data-topic-id="${topic.id}"
+      onClick={() => navigateToTopic()}
+    >
+      {topic.icon && (
+        <div className="l-2 absolute left-1 top-2 flex items-center rounded-md bg-primary p-4 dark:bg-primary-dark">
+          {iconsMap[topic.icon]}
+        </div>
+      )}
+      <div className="topic-info m-auto flex max-w-[80%] flex-col items-center gap-4 pt-8 text-center">
+        <h2 className="text-2xl font-bold tracking-wide">{topic.title}</h2>
+        <h3 className="text-slate-500 dark:text-slate-400">{topic.description}</h3>
       </div>
     </div>
   );
