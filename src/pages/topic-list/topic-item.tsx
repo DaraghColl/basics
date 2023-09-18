@@ -30,7 +30,7 @@ const TopicItem: FC<TopicProps> = (props) => {
       )}
       <div className="topic-info m-auto flex max-w-[80%] flex-col items-center gap-4 pt-8 text-center">
         <h2 className="text-2xl font-bold tracking-wide">{topic.title}</h2>
-        <h3 className="text-slate-500 dark:text-slate-400">{topic.description}</h3>
+        <h3 className="font-normal tracking-wide text-slate-500 dark:text-slate-400">{topic.description}</h3>
       </div>
     </div>
   );
