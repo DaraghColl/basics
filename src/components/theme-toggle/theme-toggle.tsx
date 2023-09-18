@@ -14,7 +14,7 @@ const ThemeToggle: FC = () => {
 
   return (
     <button
-      className="theme-toggle"
+      className="transition duration-100 ease-in-out active:scale-95"
       id="theme_toggle"
       aria-label="theme toggle button"
       onClick={() => handleThemeSwitch()}
