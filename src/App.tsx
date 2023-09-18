@@ -10,7 +10,7 @@ function App() {
       <ToastContainer
         toastClassName="custom-toast bg-primary dark:bg-primary-dark text-primary dark:text-primary-light"
         newestOnTop={true}
-        autoClose={50000}
+        autoClose={1000}
         hideProgressBar={true}
       />
       <Router>
