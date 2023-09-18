@@ -1,4 +1,3 @@
-import './slider-actions.css';
 import { ChangeEvent, FC } from 'react';
 
 interface SliderActionsInterface {
@@ -13,9 +12,11 @@ const SliderActions: FC<SliderActionsInterface> = (props) => {
   const { shuffleSlides, shuffleOn, canAnswer, inputValue, handleInputChange } = props;
 
   return (
-    <div className="slider-controls">
+    <div className="flex items-center justify-center gap-6">
       <button
-        className={`slider-controls-button ${shuffleOn ? 'slider-controls-selected' : ''}`}
+        className={`cursor-pointer rounded-md bg-secondary p-4 active:scale-95 dark:bg-secondary-dark ${
+          shuffleOn ? 'bg-primary-dark text-secondary dark:bg-secondary dark:text-primary-dark' : ''
+        }`}
         onClick={shuffleSlides}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -24,11 +25,13 @@ const SliderActions: FC<SliderActionsInterface> = (props) => {
         </svg>
       </button>
       {canAnswer && (
-        <div className="slide-answer">
+        <div className="flex w-full justify-around gap-4">
           <input
             type="text"
             placeholder="your answer"
+            autoComplete="off"
             name="slide-answer"
+            className="w-full rounded-md border-solid bg-secondary p-3 outline-none dark:bg-secondary-dark"
             id="slide_answer"
             value={inputValue}
             onChange={handleInputChange}
