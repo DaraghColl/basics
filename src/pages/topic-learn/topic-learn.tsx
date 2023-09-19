@@ -39,7 +39,7 @@ const TopicLearn = () => {
     };
 
     return (
-      <div className="flex h-[calc(100%_-_8rem)] w-full flex-col gap-4">
+      <div className="h-100dvh flex w-full flex-col gap-4">
         <h2 className="text-center text-2xl font-bold tracking-wide">{title}</h2>
         <div
           className="scrollbar no-scrollbar flex h-full w-full snap-x snap-mandatory gap-8 overflow-scroll scroll-smooth"
