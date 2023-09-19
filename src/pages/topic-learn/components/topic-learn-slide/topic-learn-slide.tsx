@@ -27,7 +27,7 @@ const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
 
   return (
     <div className="w-full min-w-full snap-center snap-always" key={topicData.front} onClick={flipCard}>
-      <div className="h-full cursor-pointer rounded-md bg-secondary p-8 dark:bg-secondary-dark">
+      <div className="no-blue-tap-highlight h-full cursor-pointer rounded-md bg-secondary p-8 dark:bg-secondary-dark ">
         <div
           className={`preserve-3d relative flex h-full items-center justify-center transition-transform duration-[0.8s] ${
             isFlipped ? 'rotate-y-180' : ''
