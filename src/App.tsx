@@ -3,6 +3,7 @@ import { TopicLearn } from './pages/topic-learn/topic-learn';
 import { TopicList } from './pages/topic-list/topic-list';
 import { Header } from './components/header/header';
 import { ToastContainer } from 'react-toastify';
+import { ScrollToTop } from './components/scroll-to-top/scroll-to-top';
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
         hideProgressBar={true}
       />
       <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<TopicList />} />
-          <Route path="/topic-learn/:id" element={<TopicLearn />} />
-        </Routes>
+        <ScrollToTop>
+          <Header />
+          <Routes>
+            <Route path="/" element={<TopicList />} />
+            <Route path="/topic-learn/:id" element={<TopicLearn />} />
+          </Routes>
+        </ScrollToTop>
       </Router>
     </div>
   );
