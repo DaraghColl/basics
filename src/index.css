@@ -72,6 +72,6 @@ html[data-theme='light'] {
   backface-visibility: hidden;
 }
 
-.h-100dvh {
-  height: calc(100dvh - 10rem);
+.slide-height {
+  height: calc(100% - 10rem);
 }
