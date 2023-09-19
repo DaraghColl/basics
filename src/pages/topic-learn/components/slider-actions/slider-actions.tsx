@@ -15,7 +15,7 @@ const SliderActions: FC<SliderActionsInterface> = (props) => {
     <div className="flex items-center justify-center gap-6">
       <button
         className={`cursor-pointer rounded-md bg-secondary p-4 active:scale-95 dark:bg-secondary-dark ${
-          shuffleOn ? 'bg-secondary-dark text-secondary dark:bg-primary dark:text-primary-dark' : ''
+          shuffleOn ? 'bg-secondary-dark text-secondary dark:bg-primary-light dark:text-primary-dark' : ''
         }`}
         onClick={shuffleSlides}
       >
