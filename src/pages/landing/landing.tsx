@@ -7,7 +7,7 @@ const Landing: FC = () => {
       <h1 className="text-4xl font-bold tracking-tight text-primary-dark dark:text-primary-light sm:text-6xl ">
         Basics
       </h1>
-      <p className="mt-6 text-lg leading-8 text-gray-600 md:max-w-[70%]">
+      <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-100 md:max-w-[70%]">
         Welcome to basics. Use our <span className="text-indigo-600">interactive</span> slides to gain an understanding
         and master the <span className="text-indigo-600">basics</span> of multiple subjects, from math, to language, to
         countries flags.
