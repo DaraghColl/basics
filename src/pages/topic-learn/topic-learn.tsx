@@ -40,20 +40,22 @@ const TopicLearn = () => {
 
     return (
       <div className="relative flex h-3/4 w-full flex-col gap-4">
-        <Link to="/topic-list">
-          <svg
-            className="absolute top-4 h-8 w-8"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-          </svg>
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link to="/topic-list">
+            <svg
+              className=" h-8 w-8"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+          </Link>
 
-        <h2 className="text-center text-2xl font-bold tracking-wide">{title}</h2>
+          <h2 className="flex-[2] text-center text-2xl font-bold tracking-wide">{title}</h2>
+        </div>
         <div
           className="scrollbar no-scrollbar flex h-full w-full snap-x snap-mandatory gap-8 overflow-scroll scroll-smooth"
           key={`slides_shuffle_${shuffleOn}`}
