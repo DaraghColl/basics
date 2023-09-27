@@ -114,10 +114,6 @@ const europeanCuntriesData: TopicData[] = [
     back: 'Bulgaria',
   },
   {
-    front: '🇸🇮',
-    back: 'Slovenia',
-  },
-  {
     front: '🇱🇺',
     back: 'Luxembourg',
   },
@@ -204,38 +200,6 @@ const europeanCuntriesData: TopicData[] = [
   {
     front: '🇫🇴',
     back: 'Faroe Islands',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
-  },
-  {
-    front: '🇬🇮',
-    back: 'Gibraltar',
   },
 ];
 
