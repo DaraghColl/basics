@@ -1,15 +1,12 @@
-import { ChangeEvent, FC } from 'react';
+import { FC } from 'react';
 
 interface SliderActionsInterface {
   shuffleSlides: () => void;
   shuffleOn: boolean;
-  canAnswer: boolean | undefined;
-  inputValue: string;
-  handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const SliderActions: FC<SliderActionsInterface> = (props) => {
-  const { shuffleSlides, shuffleOn, canAnswer, inputValue, handleInputChange } = props;
+  const { shuffleSlides, shuffleOn } = props;
 
   return (
     <div className="flex items-center justify-center gap-6">
@@ -24,20 +21,6 @@ const SliderActions: FC<SliderActionsInterface> = (props) => {
           <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
         </svg>
       </button>
-      {canAnswer && (
-        <div className="flex w-full justify-around gap-4">
-          <input
-            type="text"
-            placeholder="your answer"
-            autoComplete="off"
-            name="slide-answer"
-            className="w-full rounded-md border-solid bg-secondary p-3 outline-none dark:bg-secondary-dark"
-            id="slide_answer"
-            value={inputValue}
-            onChange={handleInputChange}
-          />
-        </div>
-      )}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { topicList } from '../../content/topics';
 import { TopicLearnSlide } from './components/topic-learn-slide/topic-learn-slide';
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { TopicData } from '../../types/types';
 import { SliderActions } from './components/slider-actions/slider-actions';
 
@@ -12,7 +12,7 @@ const TopicLearn = () => {
   const [shuffleOn, setShuffleOn] = useState(false);
 
   if (selectedTopic) {
-    const { data, title, canAnswer, backCardLarge, frontCardLarge } = selectedTopic;
+    const { data, title, backCardLarge, frontCardLarge } = selectedTopic;
     const [topic, setTopic] = useState<TopicData[]>(data);
 
     const shuffleSlides = () => {
@@ -32,14 +32,8 @@ const TopicLearn = () => {
       return;
     };
 
-    const [inputValue, setInputValue] = useState('');
-
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-      setInputValue(event.target.value);
-    };
-
     return (
-      <div className="relative flex h-3/4 w-full flex-col gap-4">
+      <div className="full-height-small relative flex w-full flex-col gap-4 pb-4 pt-4">
         <div className="flex items-center gap-4">
           <Link to="/topic-list">
             <svg
@@ -66,20 +60,12 @@ const TopicLearn = () => {
                 topicData={topicData}
                 frontCardLarge={frontCardLarge}
                 backCardLarge={backCardLarge}
-                answer={inputValue}
                 key={topicData.front}
-                setInputValue={setInputValue}
               />
             );
           })}
         </div>
-        <SliderActions
-          shuffleSlides={shuffleSlides}
-          shuffleOn={shuffleOn}
-          canAnswer={canAnswer}
-          inputValue={inputValue}
-          handleInputChange={handleInputChange}
-        />
+        <SliderActions shuffleSlides={shuffleSlides} shuffleOn={shuffleOn} />
       </div>
     );
   }

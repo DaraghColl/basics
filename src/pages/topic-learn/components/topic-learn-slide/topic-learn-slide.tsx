@@ -1,32 +1,20 @@
 import { FC, useState } from 'react';
 import { TopicData } from '../../../../types/types';
-import { toast } from 'react-toastify';
 
 interface TopicLearnSlideProps {
   topicData: TopicData;
-  answer?: string;
   frontCardLarge?: boolean;
   backCardLarge?: boolean;
-  setInputValue: (value: string) => void;
 }
 const TopicLearnSlide: FC<TopicLearnSlideProps> = (props) => {
-  const { topicData, answer, frontCardLarge, backCardLarge, setInputValue } = props;
+  const { topicData, frontCardLarge, backCardLarge } = props;
   const [isFlipped, setIsFlipped] = useState(false);
-  const flipCard = () => {
-    if (!isFlipped && answer) {
-      if (answer.toLowerCase() === topicData.back.toLowerCase()) {
-        toast.success('correct answer');
-      } else {
-        toast.error('incorrect answer');
-      }
-    }
-
-    setIsFlipped(!isFlipped);
-    setInputValue('');
-  };
-
   return (
-    <div className="w-full min-w-full snap-center snap-always" key={topicData.front} onClick={flipCard}>
+    <div
+      className="w-full min-w-full snap-center snap-always"
+      key={topicData.front}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
       <div className="no-blue-tap-highlight h-full cursor-pointer rounded-md bg-secondary p-8 dark:bg-secondary-dark ">
         <div
           className={`preserve-3d relative flex h-full items-center justify-center transition-transform duration-[0.8s] ${
