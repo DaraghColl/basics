@@ -8,10 +8,12 @@ import { europeanCuntriesData } from './countries';
 const topicList: Topic[] = [
   {
     id: 0,
-    title: 'Alphabet',
-    description: 'Learn the aplhabet with word association and images 🍎',
-    icon: 'language',
-    data: alphabetData,
+    title: 'Eurpean Countries & Flags',
+    description: 'Learn and test yourself on the european countries and their flags 🇮🇪',
+    icon: 'country',
+    data: europeanCuntriesData,
+    canAnswer: true,
+    frontCardLarge: true,
   },
   {
     id: 1,
@@ -23,12 +25,10 @@ const topicList: Topic[] = [
   },
   {
     id: 2,
-    title: 'Eurpean Countries & Flags',
-    description: 'Learn and test yourself on the european countries and their flags 🇮🇪',
-    icon: 'country',
-    data: europeanCuntriesData,
-    canAnswer: true,
-    frontCardLarge: true,
+    title: 'Alphabet',
+    description: 'Learn the aplhabet with word association and images 🍎',
+    icon: 'language',
+    data: alphabetData,
   },
   {
     id: 3,
