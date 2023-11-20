@@ -71,3 +71,7 @@ html[data-theme='light'] {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
+.full-height-small {
+  height: calc(100svh - 4rem);
+}
