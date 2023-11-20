@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, Fragment } from 'react';
 
 interface ScrollToTopInterface {
   children: string | JSX.Element | JSX.Element[];
@@ -11,7 +11,7 @@ const ScrollToTop: FC<ScrollToTopInterface> = (props) => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  return <>{children}</>;
+  return <Fragment>{children}</Fragment>;
 };
 
 export { ScrollToTop };
